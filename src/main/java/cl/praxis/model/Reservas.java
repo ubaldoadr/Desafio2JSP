@@ -1,5 +1,7 @@
 package cl.praxis.model;
 
+import java.time.LocalDate;
+
 public class Reservas {
 
 	private String nombre;
@@ -7,14 +9,11 @@ public class Reservas {
 	 private String email;
 	 private String medioPago;
 	 private String dias;
-	 private String fechaEntrada;
+	 private LocalDate fechaEntrada;
 	 private int valorPagar;
-	
-	
-	 public Reservas(int id, String nombre, String apellido, String email, String medioPago, String dias,
-			String fechaEntrada, int valorPagar) {
+	public Reservas(String nombre, String apellido, String email, String medioPago, String dias, LocalDate fechaEntrada,
+			int valorPagar) {
 		super();
-		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.email = email;
@@ -22,13 +21,6 @@ public class Reservas {
 		this.dias = dias;
 		this.fechaEntrada = fechaEntrada;
 		this.valorPagar = valorPagar;
-	}
-	private int id;
-	 public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
 	}
 	public String getNombre() {
 		return nombre;
@@ -60,10 +52,10 @@ public class Reservas {
 	public void setDias(String dias) {
 		this.dias = dias;
 	}
-	public String getFechaEntrada() {
+	public LocalDate getFechaEntrada() {
 		return fechaEntrada;
 	}
-	public void setFechaEntrada(String fechaEntrada) {
+	public void setFechaEntrada(LocalDate fechaEntrada) {
 		this.fechaEntrada = fechaEntrada;
 	}
 	public int getValorPagar() {
@@ -72,5 +64,7 @@ public class Reservas {
 	public void setValorPagar(int valorPagar) {
 		this.valorPagar = valorPagar;
 	}
+
+	
 	
 }
